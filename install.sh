@@ -1,4 +1,6 @@
 # OdroidSetup
+echo "Enter hostname:"
+read varname
 
 hostnamectl set-hostname %hostname%
 
