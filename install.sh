@@ -18,3 +18,4 @@ add-apt-repository ppa:gluster/glusterd2-4.1 -y
 apt update
 apt install -y docker-ce glusterd2-* glusterfs-* libntirpc*
 apt upgrade -y
+apt autoremove -y
