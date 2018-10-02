@@ -4,6 +4,7 @@ apt install -y \
   automake autoconf apt-transport-https \
   ca-certificates cpufrequtils curl \
   git golang-go \
+  htop \
   libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev \
   pkg-config \
   software-properties-common screen sysfsutils \
