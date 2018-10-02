@@ -1,8 +1,8 @@
 # OdroidSetup
 echo "Enter hostname:"
-read varname
+read hostname
 
-hostnamectl set-hostname %hostname%
+hostnamectl set-hostname $hostname
 
 echo 192.168.1.191 g01 >> /etc/hosts
 echo 192.168.1.192 g02 >> /etc/hosts
