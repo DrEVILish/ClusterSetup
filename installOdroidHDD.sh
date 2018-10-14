@@ -1,4 +1,7 @@
-
+#!/bin/bash
+#
+# curl -sSL https://raw.githubusercontent.com/DrEVILish/ClusterSetup/master/installOdroidHDD.sh | sh
+#
 (
 echo g 
 echo n 
