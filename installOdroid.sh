@@ -11,6 +11,7 @@ hostnamectl set-hostname $1
 echo "Please set a Static IP Address using the Armbian Config"
 
 apt update && apt upgrade -y
+apt install -yq curl
 curl -sSL https://get.docker.com/ | sh
 
 apt-get install -y software-properties-common xfsprogs
