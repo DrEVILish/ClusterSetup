@@ -23,7 +23,7 @@ apt-get install -y glusterfs-* libntirpc*
 systemctl start glusterd
 systemctl enable glusterd
 
-apt install sysfsutils
+apt install sysfsutils -yqq
 
 touch /etc/default/cpufrequtils
 echo 'ENABLE="true"' >> /etc/default/cpufrequtils 
