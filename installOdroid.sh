@@ -14,9 +14,9 @@ apt update && apt upgrade -y
 curl -sSL https://get.docker.com/ | sh
 
 apt-get install -y software-properties-common xfsprogs
-add-apt-repository ppa:gluster/libntirpc-1.7
-add-apt-repository ppa:gluster/glusterfs-4.1
-add-apt-repository ppa:gluster/glusterd2-4.1
+add-apt-repository ppa:gluster/libntirpc-1.7 -y
+add-apt-repository ppa:gluster/glusterfs-4.1 -y
+add-apt-repository ppa:gluster/glusterd2-4.1 -y
 apt-get update
 apt-get install -y glusterfs-* libntirpc*
 
