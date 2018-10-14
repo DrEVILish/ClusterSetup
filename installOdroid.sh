@@ -8,7 +8,7 @@
 
 hostnamectl set-hostname $1
 
-echo "Please set a Static IP Address using the Armbian Config"
+echo "Please set a Static IP Address for $1 $(</sys/class/net/eth0/address)"
 
 apt update && apt upgrade -y
 apt install -yqq curl sysfsutils
