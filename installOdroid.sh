@@ -3,7 +3,7 @@
 # To setup Odroid run the below command on Ubuntu Host Machine
 # wget https://raw.githubusercontent.com/DrEVILish/ClusterSetup/master/installOdroid.sh
 # chmod +x ./installOdroid.sh
-# ./installOdroid HOSTNAME
+# ./installOdroid.sh h01
 #
 
 hostnamectl set-hostname $1
