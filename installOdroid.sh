@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# To setup Odroid run the below command
+# To setup Odroid run the below command on Ubuntu Host Machine
 # curl -sSL https://raw.githubusercontent.com/DrEVILish/ClusterSetup/master/installOdroid.sh | sh
 #
 
@@ -11,13 +11,15 @@ echo "Please set a Static IP Address using the Armbian Config"
 apt update && apt upgrade -y
 curl -sSL https://get.docker.com/ | sh
 
-wget -O - https://download.gluster.org/pub/gluster/glusterfs/4.1/rsa.pub | apt-key add -
-DEBID=$(grep 'VERSION_ID=' /etc/os-release | cut -d '=' -f 2 | tr -d '"')
-DEBVER=$(grep 'VERSION=' /etc/os-release | grep -Eo '[a-z]+')
-DEBARCH=$(dpkg --print-architecture)
-echo deb https://download.gluster.org/pub/gluster/glusterfs/LATEST/Debian/${DEBID}/${DEBARCH}/apt ${DEBVER} main > /etc/apt/sources.list.d/gluster.list
+apt-get install -y software-properties-common xfsprogs
+add-apt-repository ppa:gluster/libntirpc-1.7
+add-apt-repository ppa:gluster/glusterfs-4.1
+add-apt-repository ppa:gluster/glusterd2-4.1
 apt-get update
-apt-get install -yq glusterfs-server
+apt-get install -y glusterfs-* libntirpc*
+
+systemctl start glusterd
+systemctl enable glusterd
 
 touch /etc/default/cpufrequtils
 echo 'ENABLE="true"' >> /etc/default/cpufrequtils 
