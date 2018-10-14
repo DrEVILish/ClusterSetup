@@ -3,9 +3,8 @@
 # To setup Odroid run the below command
 # curl -sSL https://raw.githubusercontent.com/DrEVILish/ClusterSetup/master/installOdroid.sh | sh
 #
-echo "Enter hostname:"
-read hostname
-hostnamectl set-hostname $hostname
+
+hostnamectl set-hostname $1
 
 echo "Please set a Static IP Address using the Armbian Config"
 
