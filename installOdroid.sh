@@ -1,7 +1,9 @@
 #!/bin/bash
 #
 # To setup Odroid run the below command on Ubuntu Host Machine
-# curl -sSL https://raw.githubusercontent.com/DrEVILish/ClusterSetup/master/installOdroid.sh | sh
+# wget https://raw.githubusercontent.com/DrEVILish/ClusterSetup/master/installOdroid.sh
+# chmod +x ./installOdroid.sh
+# ./installOdroid HOSTNAME
 #
 
 hostnamectl set-hostname $1
