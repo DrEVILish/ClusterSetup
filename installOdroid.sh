@@ -1,5 +1,8 @@
+#!/bin/bash
+#
+# To setup Odroid run the below command
 # curl -sSL https://raw.githubusercontent.com/DrEVILish/ClusterSetup/master/installOdroid.sh | sh
-
+#
 echo "Enter hostname:"
 read hostname
 hostnamectl set-hostname $hostname
