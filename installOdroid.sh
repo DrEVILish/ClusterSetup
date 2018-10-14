@@ -13,7 +13,7 @@ echo "Please set a Static IP Address for $1 $(</sys/class/net/eth0/address)"
 apt update && apt upgrade -y
 apt install -yqq curl sysfsutils
 apt autoremove -y
-curl -sSL https://get.docker.com/ | sh
+# curl -sSL https://get.docker.com/ | sh
 
 apt-get install -y software-properties-common xfsprogs
 add-apt-repository ppa:gluster/libntirpc-1.7 -y
