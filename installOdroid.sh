@@ -17,7 +17,7 @@ DEBVER=$(grep 'VERSION=' /etc/os-release | grep -Eo '[a-z]+')
 DEBARCH=$(dpkg --print-architecture)
 echo deb https://download.gluster.org/pub/gluster/glusterfs/LATEST/Debian/${DEBID}/${DEBARCH}/apt ${DEBVER} main > /etc/apt/sources.list.d/gluster.list
 apt-get update
-apt-get install glusterfs-server
+apt-get install -yq glusterfs-server
 
 touch /etc/default/cpufrequtils
 echo 'ENABLE="true"' >> /etc/default/cpufrequtils 
