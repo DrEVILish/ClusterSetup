@@ -11,7 +11,8 @@ hostnamectl set-hostname $1
 echo "Please set a Static IP Address using the Armbian Config"
 
 apt update && apt upgrade -y
-apt install -yq curl
+apt install -yqq curl sysfsutils
+apt autoremove -y
 curl -sSL https://get.docker.com/ | sh
 
 apt-get install -y software-properties-common xfsprogs
@@ -23,8 +24,6 @@ apt-get install -y glusterfs-* libntirpc*
 
 systemctl start glusterd
 systemctl enable glusterd
-
-apt install sysfsutils -yqq
 
 touch /etc/default/cpufrequtils
 echo 'ENABLE="true"' >> /etc/default/cpufrequtils 
