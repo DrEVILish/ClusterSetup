@@ -38,3 +38,6 @@ chmod 600 /var/swapfile
 mkswap /var/swapfile
 swapon /var/swapfile
 echo "/var/swapfile    none    swap    sw    0    0" >> /etc/fstab
+
+
+echo "Please reboot before continuing with HDD config."
