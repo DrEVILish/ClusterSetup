@@ -11,8 +11,9 @@ hostnamectl set-hostname $1
 echo "Please set a Static IP Address for $1 $(</sys/class/net/eth0/address)"
 
 # Disable IPv6 use only IPv4
-sysctl -w net.ipv6.conf.all.disable_ipv6=1
-sysctl -w net.ipv6.conf.default.disable_ipv6=1
+echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf
+echo "net.ipv6.conf.default.disable_ipv6 = 1" >> /etc/sysctl.conf
+echo "net.ipv6.conf.lo.disable_ipv6 = 1" >> /etc/sysctl.conf
 
 apt update && apt upgrade -y
 apt install -yqq curl sysfsutils
