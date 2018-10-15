@@ -18,3 +18,7 @@ echo '/dev/sda1 /brickA xfs defaults 1 2' >> /etc/fstab
 mount -a && mount
 
 mkdir /brickA/brick01
+
+
+echo 'HC2 base configuation complete'
+echo 'Please configure new disk into gluster pool'
